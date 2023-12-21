@@ -60,10 +60,10 @@ namespace Dropify
         }
 
         /// <summary>
-        /// 
+        /// Upon loading the form it should try to establish connection with database
+        /// asynchronously so that this loading does not block UI Thread. await keeps
+        /// a promise to retun the async task when done.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private async void Form1_Load(object sender, EventArgs e)
         {
             try
@@ -82,7 +82,9 @@ namespace Dropify
         }
 
         /// <summary>
-        /// Asynchronusly checks the database connection so that UI does not block rendering.
+        /// Asynchronus Task with a return type of string. This Task will return
+        /// it has value or no value from the database without blocking the main
+        /// form from running.
         /// </summary>
         /// <returns></returns>
         private async Task<string> GetServerStatus()
