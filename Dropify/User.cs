@@ -22,6 +22,7 @@ namespace Dropify
         public string  Gender { get; set; }
         public string  GovtIDType { get; set; }
         public string GovtID { get; set; }
+        public Address address { get; set; }
 
     }
 }
