@@ -9,5 +9,8 @@ namespace Dropify
     class User
     {
         public Guid ProfileID { get; set; }
+        public string PasswordHash { get; set; }
+
+        public string Role { get; set; }
     }
 }
