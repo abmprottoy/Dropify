@@ -118,34 +118,64 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Avatar_Default" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Avatar_Default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="3p4nn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\3p4nn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HeroImage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HeroImage1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="4n3mn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\4n3mn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HeroImage2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HeroImage2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="4nnf3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\4nnf3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HeroImage3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HeroImage3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="537nf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\537nf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HeroImage4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HeroImage4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="57gnx" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\57gnx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HeroImage5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HeroImage5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="7g3nf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\7g3nf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HeroImage6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HeroImage6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="b2nen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\b2nen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HeroImage7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HeroImage7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bxxfc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\bxxfc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HeroImage8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HeroImage8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cc845" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\cc845.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HeroImage9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HeroImage9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="edg3p" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\edg3p.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="en32e" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\en32e.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="g3ex3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\g3ex3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gpxng" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\gpxng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n8pfe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\n8pfe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n8ydd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\n8ydd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nf7bn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\nf7bn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nn4wx" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\nn4wx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="w2n7e" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\w2n7e.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="xce8d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\xce8d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yyn57" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\yyn57.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

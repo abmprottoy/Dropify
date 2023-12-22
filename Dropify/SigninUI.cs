@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Dropify
 {
-    public partial class Form1 : BaseForm
+    public partial class SigninUI : BaseForm
     {
         private Random random = new Random();
         private string connectionString = Properties.Settings.Default.ConnectionString;
-
         private string status = "Connecting...";
 
-        public Form1()
+        public SigninUI()
         {
             InitializeComponent();
             base.TitlebarColorInt = 5119488;
@@ -24,18 +24,25 @@ namespace Dropify
         }
 
 
-
-
-
-
         private void LoadRandomImage()
         {
             int randomImageIndex = random.Next(1, 10);
             string imageName = "HeroImage" + randomImageIndex.ToString();
 
-            pictureBox1.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(imageName);
+            pictureBox1.Image = (Image)Properties.Resources.ResourceManager.GetObject(imageName);
         }
 
+
+        #region Sign In
+        
+        #endregion Sign In
+
+
+
+
+
+
+        #region Password Toggle
         private void btnPassToggle_Click(object sender, EventArgs e)
         {
             TogglePasswordReveal();
@@ -53,12 +60,10 @@ namespace Dropify
                 btnPassToggle.Text = "";
             }
         }
+        #endregion
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
 
-        }
-
+        #region Server Connection Check
         /// <summary>
         /// Upon loading the form it should try to establish connection with database
         /// asynchronously so that this loading does not block UI Thread. await keeps
@@ -109,6 +114,15 @@ namespace Dropify
         private void UpdateStatus()
         {
             lblStatus.Text = status;
+        }
+
+        #endregion Server Connection Check
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            SignupUI signupForm = new SignupUI();
+            signupForm.Show();
+            this.Hide();
         }
     }
 }

@@ -36,25 +36,28 @@ public class BaseForm : Form
         DwmSetWindowAttribute(Handle, 35, new[] { TitlebarColorInt }, sizeof(int)); // Titlebar background color
     }
 
-    //protected override void OnClosing(CancelEventArgs e)
-    //{
-    //    DialogResult result = MessageBox.Show("Do you really want to close?", "Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+    protected override void OnClosing(CancelEventArgs e)
+    {
+        DialogResult result = MessageBox.Show("Do you really want to close?", "Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 
-    //    switch (result)
-    //    {
-    //        case DialogResult.Yes:
-    //            // User clicked 'Yes,' allow the form to close
-    //            break;
+        switch (result)
+        {
+            case DialogResult.Yes:
+                // User clicked 'Yes,' allow the form to close
+                Application.Exit();
+                break;
 
-    //        case DialogResult.No:
-    //            // User clicked 'No,' prevent the form from closing
-    //            e.Cancel = true;
-    //            break;
+            case DialogResult.No:
+                // User clicked 'No,' prevent the form from closing
+                e.Cancel = true;
+                break;
 
-    //        case DialogResult.Cancel:
-    //            // User clicked 'Cancel,' prevent the form from closing
-    //            e.Cancel = true;
-    //            break;
-    //    }
-    //}
+            case DialogResult.Cancel:
+                // User clicked 'Cancel,' prevent the form from closing
+                e.Cancel = true;
+                break;
+        }
+
+        
+    }
 }
