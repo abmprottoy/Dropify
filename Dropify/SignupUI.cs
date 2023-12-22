@@ -107,5 +107,11 @@ namespace Dropify
             this.Hide();
         }
 
+        private void btnSetAddress_Click(object sender, EventArgs e)
+        {
+            AddressPicker userAddress = new AddressPicker("user");
+            userAddress.Show();
+            
+        }
     }
 }

@@ -31,11 +31,11 @@ namespace Dropify
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignupUI));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlTitle = new System.Windows.Forms.Panel();
             this.lbl = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlContent = new System.Windows.Forms.Panel();
             this.lblBlankSpacerSignUp = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
             this.chbxTerms = new System.Windows.Forms.CheckBox();
@@ -77,23 +77,23 @@ namespace Dropify
             this.pbxUserImage = new System.Windows.Forms.PictureBox();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.ttMaskedPhoneNum = new System.Windows.Forms.ToolTip(this.components);
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlTitle.SuspendLayout();
+            this.pnlContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCaptcha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUserImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlTitle
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.lbl);
-            this.panel1.Controls.Add(this.lblTitle);
-            this.panel1.Controls.Add(this.btnBack);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(954, 110);
-            this.panel1.TabIndex = 0;
+            this.pnlTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(0)))));
+            this.pnlTitle.Controls.Add(this.lbl);
+            this.pnlTitle.Controls.Add(this.lblTitle);
+            this.pnlTitle.Controls.Add(this.btnBack);
+            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitle.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitle.Name = "pnlTitle";
+            this.pnlTitle.Size = new System.Drawing.Size(954, 110);
+            this.pnlTitle.TabIndex = 0;
             // 
             // lbl
             // 
@@ -131,55 +131,55 @@ namespace Dropify
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // panel2
+            // pnlContent
             // 
-            this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lblBlankSpacerSignUp);
-            this.panel2.Controls.Add(this.btnNext);
-            this.panel2.Controls.Add(this.chbxTerms);
-            this.panel2.Controls.Add(this.lblConfirmPassword);
-            this.panel2.Controls.Add(this.lblPassword);
-            this.panel2.Controls.Add(this.cbxGovtIDType);
-            this.panel2.Controls.Add(this.lblGovtIDType);
-            this.panel2.Controls.Add(this.tbxAddress);
-            this.panel2.Controls.Add(this.btnConfirmPassToggle);
-            this.panel2.Controls.Add(this.btnPassToggle);
-            this.panel2.Controls.Add(this.btnSetAddress);
-            this.panel2.Controls.Add(this.lblAddress);
-            this.panel2.Controls.Add(this.btnTryAnother);
-            this.panel2.Controls.Add(this.tbxConfirmPassword);
-            this.panel2.Controls.Add(this.tbxPassword);
-            this.panel2.Controls.Add(this.pbxCaptcha);
-            this.panel2.Controls.Add(this.lblCaptcha);
-            this.panel2.Controls.Add(this.rbOther);
-            this.panel2.Controls.Add(this.rbFemale);
-            this.panel2.Controls.Add(this.rbMale);
-            this.panel2.Controls.Add(this.lblGender);
-            this.panel2.Controls.Add(this.dtpDOB);
-            this.panel2.Controls.Add(this.lblDOB);
-            this.panel2.Controls.Add(this.mtbxPhone);
-            this.panel2.Controls.Add(this.lblCountry);
-            this.panel2.Controls.Add(this.cbxCountry);
-            this.panel2.Controls.Add(this.cbxPhone);
-            this.panel2.Controls.Add(this.tbxCaptcha);
-            this.panel2.Controls.Add(this.lblPhone);
-            this.panel2.Controls.Add(this.tbxGovtID);
-            this.panel2.Controls.Add(this.tbxEmail);
-            this.panel2.Controls.Add(this.lblGovtID);
-            this.panel2.Controls.Add(this.lblEmail);
-            this.panel2.Controls.Add(this.btnChooseImage);
-            this.panel2.Controls.Add(this.tbxLastName);
-            this.panel2.Controls.Add(this.lblLastName);
-            this.panel2.Controls.Add(this.lblSubtitle);
-            this.panel2.Controls.Add(this.tbxFirstName);
-            this.panel2.Controls.Add(this.pbxUserImage);
-            this.panel2.Controls.Add(this.lblFirstName);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 110);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(954, 396);
-            this.panel2.TabIndex = 6;
+            this.pnlContent.AutoScroll = true;
+            this.pnlContent.BackColor = System.Drawing.Color.White;
+            this.pnlContent.Controls.Add(this.lblBlankSpacerSignUp);
+            this.pnlContent.Controls.Add(this.btnNext);
+            this.pnlContent.Controls.Add(this.chbxTerms);
+            this.pnlContent.Controls.Add(this.lblConfirmPassword);
+            this.pnlContent.Controls.Add(this.lblPassword);
+            this.pnlContent.Controls.Add(this.cbxGovtIDType);
+            this.pnlContent.Controls.Add(this.lblGovtIDType);
+            this.pnlContent.Controls.Add(this.tbxAddress);
+            this.pnlContent.Controls.Add(this.btnConfirmPassToggle);
+            this.pnlContent.Controls.Add(this.btnPassToggle);
+            this.pnlContent.Controls.Add(this.btnSetAddress);
+            this.pnlContent.Controls.Add(this.lblAddress);
+            this.pnlContent.Controls.Add(this.btnTryAnother);
+            this.pnlContent.Controls.Add(this.tbxConfirmPassword);
+            this.pnlContent.Controls.Add(this.tbxPassword);
+            this.pnlContent.Controls.Add(this.pbxCaptcha);
+            this.pnlContent.Controls.Add(this.lblCaptcha);
+            this.pnlContent.Controls.Add(this.rbOther);
+            this.pnlContent.Controls.Add(this.rbFemale);
+            this.pnlContent.Controls.Add(this.rbMale);
+            this.pnlContent.Controls.Add(this.lblGender);
+            this.pnlContent.Controls.Add(this.dtpDOB);
+            this.pnlContent.Controls.Add(this.lblDOB);
+            this.pnlContent.Controls.Add(this.mtbxPhone);
+            this.pnlContent.Controls.Add(this.lblCountry);
+            this.pnlContent.Controls.Add(this.cbxCountry);
+            this.pnlContent.Controls.Add(this.cbxPhone);
+            this.pnlContent.Controls.Add(this.tbxCaptcha);
+            this.pnlContent.Controls.Add(this.lblPhone);
+            this.pnlContent.Controls.Add(this.tbxGovtID);
+            this.pnlContent.Controls.Add(this.tbxEmail);
+            this.pnlContent.Controls.Add(this.lblGovtID);
+            this.pnlContent.Controls.Add(this.lblEmail);
+            this.pnlContent.Controls.Add(this.btnChooseImage);
+            this.pnlContent.Controls.Add(this.tbxLastName);
+            this.pnlContent.Controls.Add(this.lblLastName);
+            this.pnlContent.Controls.Add(this.lblSubtitle);
+            this.pnlContent.Controls.Add(this.tbxFirstName);
+            this.pnlContent.Controls.Add(this.pbxUserImage);
+            this.pnlContent.Controls.Add(this.lblFirstName);
+            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent.Location = new System.Drawing.Point(0, 110);
+            this.pnlContent.Name = "pnlContent";
+            this.pnlContent.Size = new System.Drawing.Size(954, 396);
+            this.pnlContent.TabIndex = 6;
             // 
             // lblBlankSpacerSignUp
             // 
@@ -317,6 +317,7 @@ namespace Dropify
             this.btnSetAddress.TabIndex = 28;
             this.btnSetAddress.Text = "Set Address";
             this.btnSetAddress.UseVisualStyleBackColor = false;
+            this.btnSetAddress.Click += new System.EventHandler(this.btnSetAddress_Click);
             // 
             // lblAddress
             // 
@@ -676,17 +677,17 @@ namespace Dropify
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(954, 506);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlContent);
+            this.Controls.Add(this.pnlTitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(640, 500);
             this.Name = "SignupUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dropify - Sign Up";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlTitle.ResumeLayout(false);
+            this.pnlTitle.PerformLayout();
+            this.pnlContent.ResumeLayout(false);
+            this.pnlContent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCaptcha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUserImage)).EndInit();
             this.ResumeLayout(false);
@@ -695,14 +696,14 @@ namespace Dropify
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlTitle;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.PictureBox pbxUserImage;
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.TextBox tbxFirstName;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.TextBox tbxLastName;
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblSubtitle;
