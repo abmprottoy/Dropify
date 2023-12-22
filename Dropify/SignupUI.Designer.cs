@@ -77,6 +77,9 @@ namespace Dropify
             this.pbxUserImage = new System.Windows.Forms.PictureBox();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.ttMaskedPhoneNum = new System.Windows.Forms.ToolTip(this.components);
+            this.ttPasswordValid = new System.Windows.Forms.ToolTip(this.components);
+            this.ttPasswordMatch = new System.Windows.Forms.ToolTip(this.components);
+            this.ttAddress = new System.Windows.Forms.ToolTip(this.components);
             this.pnlTitle.SuspendLayout();
             this.pnlContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCaptcha)).BeginInit();
@@ -201,9 +204,10 @@ namespace Dropify
             this.btnNext.Location = new System.Drawing.Point(384, 1127);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 27);
-            this.btnNext.TabIndex = 34;
+            this.btnNext.TabIndex = 22;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // chbxTerms
             // 
@@ -212,9 +216,10 @@ namespace Dropify
             this.chbxTerms.Location = new System.Drawing.Point(384, 1048);
             this.chbxTerms.Name = "chbxTerms";
             this.chbxTerms.Size = new System.Drawing.Size(451, 24);
-            this.chbxTerms.TabIndex = 33;
+            this.chbxTerms.TabIndex = 21;
             this.chbxTerms.Text = "I agree with Dropify Inc\'s Terms and Conditions and Privacy Policy.";
             this.chbxTerms.UseVisualStyleBackColor = true;
+            this.chbxTerms.CheckStateChanged += new System.EventHandler(this.chbxTerms_CheckStateChanged);
             // 
             // lblConfirmPassword
             // 
@@ -247,7 +252,7 @@ namespace Dropify
             this.cbxGovtIDType.Name = "cbxGovtIDType";
             this.cbxGovtIDType.Size = new System.Drawing.Size(281, 28);
             this.cbxGovtIDType.Sorted = true;
-            this.cbxGovtIDType.TabIndex = 31;
+            this.cbxGovtIDType.TabIndex = 8;
             // 
             // lblGovtIDType
             // 
@@ -273,6 +278,8 @@ namespace Dropify
             this.tbxAddress.Size = new System.Drawing.Size(196, 27);
             this.tbxAddress.TabIndex = 29;
             this.tbxAddress.Text = "None";
+            this.tbxAddress.TextChanged += new System.EventHandler(this.tbxAddress_TextChanged);
+            this.tbxAddress.MouseHover += new System.EventHandler(this.tbxAddress_MouseHover);
             // 
             // btnConfirmPassToggle
             // 
@@ -283,10 +290,10 @@ namespace Dropify
             this.btnConfirmPassToggle.Location = new System.Drawing.Point(769, 877);
             this.btnConfirmPassToggle.Name = "btnConfirmPassToggle";
             this.btnConfirmPassToggle.Size = new System.Drawing.Size(25, 25);
-            this.btnConfirmPassToggle.TabIndex = 3;
+            this.btnConfirmPassToggle.TabIndex = 18;
             this.btnConfirmPassToggle.Text = "";
             this.btnConfirmPassToggle.UseVisualStyleBackColor = true;
-            this.btnConfirmPassToggle.Click += new System.EventHandler(this.btnPassToggle_Click);
+            this.btnConfirmPassToggle.Click += new System.EventHandler(this.btnConfirmPassToggle_Click);
             // 
             // btnPassToggle
             // 
@@ -297,7 +304,7 @@ namespace Dropify
             this.btnPassToggle.Location = new System.Drawing.Point(769, 799);
             this.btnPassToggle.Name = "btnPassToggle";
             this.btnPassToggle.Size = new System.Drawing.Size(25, 25);
-            this.btnPassToggle.TabIndex = 3;
+            this.btnPassToggle.TabIndex = 16;
             this.btnPassToggle.Text = "";
             this.btnPassToggle.UseVisualStyleBackColor = true;
             this.btnPassToggle.Click += new System.EventHandler(this.btnPassToggle_Click);
@@ -314,7 +321,7 @@ namespace Dropify
             this.btnSetAddress.Location = new System.Drawing.Point(715, 717);
             this.btnSetAddress.Name = "btnSetAddress";
             this.btnSetAddress.Size = new System.Drawing.Size(79, 27);
-            this.btnSetAddress.TabIndex = 28;
+            this.btnSetAddress.TabIndex = 14;
             this.btnSetAddress.Text = "Set Address";
             this.btnSetAddress.UseVisualStyleBackColor = false;
             this.btnSetAddress.Click += new System.EventHandler(this.btnSetAddress_Click);
@@ -342,7 +349,7 @@ namespace Dropify
             this.btnTryAnother.Location = new System.Drawing.Point(715, 965);
             this.btnTryAnother.Name = "btnTryAnother";
             this.btnTryAnother.Size = new System.Drawing.Size(79, 27);
-            this.btnTryAnother.TabIndex = 26;
+            this.btnTryAnother.TabIndex = 20;
             this.btnTryAnother.Text = "Try Another";
             this.btnTryAnother.UseVisualStyleBackColor = false;
             this.btnTryAnother.Click += new System.EventHandler(this.btnTryAnother_Click);
@@ -352,24 +359,26 @@ namespace Dropify
             this.tbxConfirmPassword.BackColor = System.Drawing.Color.White;
             this.tbxConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxConfirmPassword.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxConfirmPassword.ForeColor = System.Drawing.Color.White;
+            this.tbxConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.tbxConfirmPassword.Location = new System.Drawing.Point(513, 877);
             this.tbxConfirmPassword.Name = "tbxConfirmPassword";
             this.tbxConfirmPassword.PasswordChar = '●';
             this.tbxConfirmPassword.Size = new System.Drawing.Size(250, 27);
-            this.tbxConfirmPassword.TabIndex = 2;
+            this.tbxConfirmPassword.TabIndex = 17;
+            this.tbxConfirmPassword.TextChanged += new System.EventHandler(this.tbxConfirmPassword_TextChanged);
             // 
             // tbxPassword
             // 
             this.tbxPassword.BackColor = System.Drawing.Color.White;
             this.tbxPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxPassword.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxPassword.ForeColor = System.Drawing.Color.White;
+            this.tbxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.tbxPassword.Location = new System.Drawing.Point(513, 799);
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.PasswordChar = '●';
             this.tbxPassword.Size = new System.Drawing.Size(250, 27);
-            this.tbxPassword.TabIndex = 2;
+            this.tbxPassword.TabIndex = 15;
+            this.tbxPassword.TextChanged += new System.EventHandler(this.tbxPassword_TextChanged);
             // 
             // pbxCaptcha
             // 
@@ -397,10 +406,11 @@ namespace Dropify
             this.rbOther.Location = new System.Drawing.Point(743, 643);
             this.rbOther.Name = "rbOther";
             this.rbOther.Size = new System.Drawing.Size(51, 17);
-            this.rbOther.TabIndex = 23;
+            this.rbOther.TabIndex = 13;
             this.rbOther.TabStop = true;
             this.rbOther.Text = "Other";
             this.rbOther.UseVisualStyleBackColor = true;
+            this.rbOther.CheckedChanged += new System.EventHandler(this.rbOther_CheckedChanged);
             // 
             // rbFemale
             // 
@@ -408,10 +418,11 @@ namespace Dropify
             this.rbFemale.Location = new System.Drawing.Point(626, 643);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(59, 17);
-            this.rbFemale.TabIndex = 22;
+            this.rbFemale.TabIndex = 12;
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
             this.rbFemale.UseVisualStyleBackColor = true;
+            this.rbFemale.CheckedChanged += new System.EventHandler(this.rbFemale_CheckedChanged);
             // 
             // rbMale
             // 
@@ -419,10 +430,11 @@ namespace Dropify
             this.rbMale.Location = new System.Drawing.Point(513, 643);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(48, 17);
-            this.rbMale.TabIndex = 21;
+            this.rbMale.TabIndex = 11;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
             this.rbMale.UseVisualStyleBackColor = true;
+            this.rbMale.CheckedChanged += new System.EventHandler(this.rbMale_CheckedChanged);
             // 
             // lblGender
             // 
@@ -442,7 +454,7 @@ namespace Dropify
             this.dtpDOB.Location = new System.Drawing.Point(513, 565);
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(281, 23);
-            this.dtpDOB.TabIndex = 19;
+            this.dtpDOB.TabIndex = 10;
             // 
             // lblDOB
             // 
@@ -460,12 +472,13 @@ namespace Dropify
             this.mtbxPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtbxPhone.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
             this.mtbxPhone.Location = new System.Drawing.Point(601, 332);
-            this.mtbxPhone.Mask = "000-00000000";
+            this.mtbxPhone.Mask = "00000000000";
             this.mtbxPhone.Name = "mtbxPhone";
             this.mtbxPhone.PromptChar = ' ';
             this.mtbxPhone.Size = new System.Drawing.Size(193, 27);
-            this.mtbxPhone.TabIndex = 17;
+            this.mtbxPhone.TabIndex = 7;
             this.mtbxPhone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbxPhone_MaskInputRejected);
+            this.mtbxPhone.TextChanged += new System.EventHandler(this.mtbxPhone_TextChanged);
             this.mtbxPhone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mtbxPhone_KeyDown);
             // 
             // lblCountry
@@ -494,7 +507,7 @@ namespace Dropify
             this.cbxCountry.Name = "cbxCountry";
             this.cbxCountry.Size = new System.Drawing.Size(281, 28);
             this.cbxCountry.Sorted = true;
-            this.cbxCountry.TabIndex = 15;
+            this.cbxCountry.TabIndex = 5;
             this.cbxCountry.SelectedIndexChanged += new System.EventHandler(this.cbxCountry_SelectedIndexChanged);
             // 
             // cbxPhone
@@ -512,7 +525,7 @@ namespace Dropify
             this.cbxPhone.Name = "cbxPhone";
             this.cbxPhone.Size = new System.Drawing.Size(82, 28);
             this.cbxPhone.Sorted = true;
-            this.cbxPhone.TabIndex = 14;
+            this.cbxPhone.TabIndex = 6;
             // 
             // tbxCaptcha
             // 
@@ -524,7 +537,8 @@ namespace Dropify
             this.tbxCaptcha.MaxLength = 128;
             this.tbxCaptcha.Name = "tbxCaptcha";
             this.tbxCaptcha.Size = new System.Drawing.Size(90, 27);
-            this.tbxCaptcha.TabIndex = 13;
+            this.tbxCaptcha.TabIndex = 19;
+            this.tbxCaptcha.TextChanged += new System.EventHandler(this.tbxCaptcha_TextChanged);
             // 
             // lblPhone
             // 
@@ -547,7 +561,8 @@ namespace Dropify
             this.tbxGovtID.MaxLength = 128;
             this.tbxGovtID.Name = "tbxGovtID";
             this.tbxGovtID.Size = new System.Drawing.Size(281, 27);
-            this.tbxGovtID.TabIndex = 11;
+            this.tbxGovtID.TabIndex = 9;
+            this.tbxGovtID.TextChanged += new System.EventHandler(this.tbxGovtID_TextChanged);
             // 
             // tbxEmail
             // 
@@ -559,7 +574,8 @@ namespace Dropify
             this.tbxEmail.MaxLength = 128;
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(281, 27);
-            this.tbxEmail.TabIndex = 11;
+            this.tbxEmail.TabIndex = 4;
+            this.tbxEmail.TextChanged += new System.EventHandler(this.tbxEmail_TextChanged);
             // 
             // lblGovtID
             // 
@@ -595,9 +611,10 @@ namespace Dropify
             this.btnChooseImage.Location = new System.Drawing.Point(122, 235);
             this.btnChooseImage.Name = "btnChooseImage";
             this.btnChooseImage.Size = new System.Drawing.Size(75, 27);
-            this.btnChooseImage.TabIndex = 9;
+            this.btnChooseImage.TabIndex = 1;
             this.btnChooseImage.Text = "Browse";
             this.btnChooseImage.UseVisualStyleBackColor = false;
+            this.btnChooseImage.Click += new System.EventHandler(this.btnChooseImage_Click);
             // 
             // tbxLastName
             // 
@@ -609,7 +626,8 @@ namespace Dropify
             this.tbxLastName.MaxLength = 128;
             this.tbxLastName.Name = "tbxLastName";
             this.tbxLastName.Size = new System.Drawing.Size(281, 27);
-            this.tbxLastName.TabIndex = 8;
+            this.tbxLastName.TabIndex = 3;
+            this.tbxLastName.TextChanged += new System.EventHandler(this.tbxLastName_TextChanged);
             // 
             // lblLastName
             // 
@@ -643,7 +661,8 @@ namespace Dropify
             this.tbxFirstName.MaxLength = 128;
             this.tbxFirstName.Name = "tbxFirstName";
             this.tbxFirstName.Size = new System.Drawing.Size(281, 27);
-            this.tbxFirstName.TabIndex = 5;
+            this.tbxFirstName.TabIndex = 2;
+            this.tbxFirstName.TextChanged += new System.EventHandler(this.tbxFirstName_TextChanged);
             // 
             // pbxUserImage
             // 
@@ -670,6 +689,14 @@ namespace Dropify
             // 
             this.ttMaskedPhoneNum.IsBalloon = true;
             this.ttMaskedPhoneNum.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
+            // ttPasswordValid
+            // 
+            this.ttPasswordValid.IsBalloon = true;
+            // 
+            // ttPasswordMatch
+            // 
+            this.ttPasswordMatch.IsBalloon = true;
             // 
             // SignupUI
             // 
@@ -742,5 +769,8 @@ namespace Dropify
         private System.Windows.Forms.TextBox tbxPassword;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label lblBlankSpacerSignUp;
+        private System.Windows.Forms.ToolTip ttPasswordValid;
+        private System.Windows.Forms.ToolTip ttPasswordMatch;
+        private System.Windows.Forms.ToolTip ttAddress;
     }
 }

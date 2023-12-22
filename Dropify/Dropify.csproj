@@ -33,6 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Otp.NET, Version=1.3.0.0, Culture=neutral, PublicKeyToken=38a48df817e173a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\Otp.NET.1.3.0\lib\net45\Otp.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.4.3.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.4.3\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,8 +52,15 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activation.Designer.cs">
+      <DependentUpon>Activation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Address.cs" />
     <Compile Include="AddressPicker.cs">
       <SubType>Form</SubType>
@@ -62,6 +77,13 @@
       <DependentUpon>Captcha.resx</DependentUpon>
     </Compile>
     <Compile Include="CaptchaProvider.cs" />
+    <Compile Include="HashProvider.cs" />
+    <Compile Include="SecurityUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityUI.Designer.cs">
+      <DependentUpon>SecurityUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="SigninUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,13 +98,31 @@
     <Compile Include="SignupUI.Designer.cs">
       <DependentUpon>SignupUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="TextViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextViewer.Designer.cs">
+      <DependentUpon>TextViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="UserUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserUI.Designer.cs">
+      <DependentUpon>UserUI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Activation.resx">
+      <DependentUpon>Activation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddressPicker.resx">
       <DependentUpon>AddressPicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Captcha.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Captcha.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityUI.resx">
+      <DependentUpon>SecurityUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SigninUI.resx">
       <DependentUpon>SigninUI.cs</DependentUpon>
@@ -100,6 +140,13 @@
     <EmbeddedResource Include="SignupUI.resx">
       <DependentUpon>SignupUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TextViewer.resx">
+      <DependentUpon>TextViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI.resx">
+      <DependentUpon>UserUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -202,6 +249,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\en32e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ParcelTile.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CourierTile.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckHistory.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TrackTile.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

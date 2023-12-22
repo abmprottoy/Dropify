@@ -124,5 +124,99 @@ namespace Dropify
             signupForm.Show();
             this.Hide();
         }
+
+        private void btnSignIn_Click(object sender, EventArgs e)
+        {
+            InitiateLogin();
+        }
+
+        private void InitiateLogin()
+        {
+            string passwordHash = HashProvider.CalculateSHA256(tbxPassword.Text);
+            
+            try
+            {
+                string query = "SELECT COUNT(*) FROM Login WHERE (Email = @ProvidedEmail OR Phone = @ProvidedPhone) AND PasswordHash = @ProvidedPasswordHash";
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@ProvidedEmail", tbxEmail.Text);
+                        command.Parameters.AddWithValue("@ProvidedPhone", tbxEmail.Text);
+                        command.Parameters.AddWithValue("@ProvidedPasswordHash", passwordHash);
+
+                        int count = (int)command.ExecuteScalar();
+
+                        connection.Close();
+
+                        if (count == 1)
+                        {
+                            MessageBox.Show("Login success");
+                            GetProfileStatus();
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void GetProfileStatus()
+        {
+            try
+            {
+                string query = "SELECT ProfileStatus, ProfileID FROM Login WHERE (Email = @ProvidedEmailOrPhone OR Phone = @ProvidedEmailOrPhone)";
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@ProvidedEmailOrPhone", tbxEmail.Text);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string profileStatus = reader["ProfileStatus"] as string;
+                                Guid profileID = reader.GetGuid(reader.GetOrdinal("ProfileID"));
+
+                                if (profileStatus == "Activated")
+                                {
+                                    OpenUserUI();
+                                }else if (profileStatus == "Not Activated")
+                                {
+                                    OpenSecurityUI(profileID);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               
+            }
+        }
+
+        private void OpenSecurityUI(Guid guid)
+        {
+            SecurityUI securityUI = new SecurityUI(guid, tbxEmail.Text, 1);
+            securityUI.Show();
+            this.Hide();
+        }
+
+        private void OpenUserUI()
+        {
+            UserUI userUI = new UserUI();
+            userUI.Show();
+            this.Hide();
+        }
     }
 }

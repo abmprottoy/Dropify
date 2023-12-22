@@ -168,7 +168,7 @@ namespace Dropify
             base.TitlebarColorInt = 6573312;
             base.BorderColorInt = 6573312;
             base.WindowCorner = 3;
-            this.Text += $"- {title}";
+            this.Text += $" - {title}";
             lblTitle.Text = title;
         }
         protected override void OnClosing(CancelEventArgs e)
@@ -185,6 +185,10 @@ namespace Dropify
             else
             {
                 address.Country = cbxCountry.SelectedItem.ToString();
+                address.City = cbxCity.SelectedItem.ToString();
+                address.Area = tbxArea.Text;
+                address.Zip = tbxZip.Text;
+                address.Landmark = tbxLandmark.Text;
             }
 
             this.Hide();
