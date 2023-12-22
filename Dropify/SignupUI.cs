@@ -109,8 +109,11 @@ namespace Dropify
 
         private void btnSetAddress_Click(object sender, EventArgs e)
         {
-            AddressPicker userAddress = new AddressPicker("user");
-            userAddress.Show();
+            using (AddressPicker userAddress = new AddressPicker("user"))
+            {
+                userAddress.ShowDialog();
+                tbxAddress.Text = userAddress.address.ToString();
+            }
             
         }
     }
