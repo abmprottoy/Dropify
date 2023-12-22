@@ -69,6 +69,7 @@
     <Compile Include="SignupUI.Designer.cs">
       <DependentUpon>SignupUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <EmbeddedResource Include="Captcha.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Captcha.Designer.cs</LastGenOutput>
