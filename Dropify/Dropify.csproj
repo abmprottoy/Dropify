@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddressPicker.Designer.cs">
+      <DependentUpon>AddressPicker.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
       <DependentUpon>SignupUI.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="AddressPicker.resx">
+      <DependentUpon>AddressPicker.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Captcha.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Captcha.Designer.cs</LastGenOutput>
