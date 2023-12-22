@@ -77,6 +77,7 @@
       <DependentUpon>Captcha.resx</DependentUpon>
     </Compile>
     <Compile Include="CaptchaProvider.cs" />
+    <Compile Include="Delivery.cs" />
     <Compile Include="HashProvider.cs" />
     <Compile Include="SecurityUI.cs">
       <SubType>Form</SubType>
@@ -104,6 +105,7 @@
     <Compile Include="TextViewer.Designer.cs">
       <DependentUpon>TextViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserUI.cs">
       <SubType>Form</SubType>
