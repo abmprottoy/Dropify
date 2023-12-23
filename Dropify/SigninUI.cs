@@ -153,7 +153,6 @@ namespace Dropify
 
                         if (count == 1)
                         {
-                            MessageBox.Show("Login success");
                             GetProfileStatus();
                         }
                     }
@@ -169,7 +168,7 @@ namespace Dropify
         {
             try
             {
-                string query = "SELECT ProfileStatus, ProfileID FROM Login WHERE (Email = @ProvidedEmailOrPhone OR Phone = @ProvidedEmailOrPhone)";
+                string query = "SELECT ProfileStatus, ProfileID, Role FROM Login WHERE (Email = @ProvidedEmailOrPhone OR Phone = @ProvidedEmailOrPhone)";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -184,14 +183,17 @@ namespace Dropify
                             if (reader.Read())
                             {
                                 string profileStatus = reader["ProfileStatus"] as string;
-                                Guid profileID = reader.GetGuid(reader.GetOrdinal("ProfileID"));
+                                //Guid profileID = reader.GetGuid(reader.GetOrdinal("ProfileID"));
+                                Guid profileID = (Guid)reader["ProfileID"];
+                                string role = reader["Role"] as string;
+
 
                                 if (profileStatus == "Activated")
                                 {
-                                    OpenUserUI();
+                                    HomescreenRouter(role,profileID);
                                 }else if (profileStatus == "Not Activated")
                                 {
-                                    OpenSecurityUI(profileID);
+                                    SecurityScreenRouter(profileID,role);
                                 }
                             }
                         }
@@ -205,18 +207,63 @@ namespace Dropify
             }
         }
 
-        private void OpenSecurityUI(Guid guid)
+        private void SecurityScreenRouter(Guid profileID, string role)
         {
-            SecurityUI securityUI = new SecurityUI(guid, tbxEmail.Text, 1);
-            securityUI.Show();
-            this.Hide();
+            switch (role.ToLower())
+            {
+                case "user":
+                    SecurityUI securityUI = new SecurityUI(profileID, tbxEmail.Text, 1);
+                    securityUI.Show();
+                    this.Hide();
+                    break;
+
+                case "manager":
+                    
+                    break;
+
+                case "deliveryperson":
+                    
+                    break;
+
+                case "admin":
+
+                    break;
+
+                default:
+
+                    MessageBox.Show($"Undefined role: {role}.\nContact with the administrator.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+            }
         }
 
-        private void OpenUserUI()
+        private void HomescreenRouter(string role,Guid profileID)
         {
-            UserUI userUI = new UserUI();
-            userUI.Show();
-            this.Hide();
+            switch (role.ToLower())
+            {
+                case "user":
+                    UserUI userUI = new UserUI(profileID);
+                    userUI.Show();
+                    this.Hide();
+                    break;
+
+                case "manager":
+
+                    break;
+
+                case "deliveryperson":
+
+                    break;
+
+                case "admin":
+
+                    break;
+
+                default:
+
+                    MessageBox.Show($"Undefined role: {role}.\nContact with the administrator.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+            }
         }
+
     }
 }

@@ -26,6 +26,7 @@ namespace Dropify
         };
 
         public User ToBeUser = new User();
+        public string filePath;
         public string capctchaText;
         public string selectedGender;
         public bool isFirstNameEmpty = true;
@@ -84,7 +85,7 @@ namespace Dropify
             this.Hide();
         }
 
-
+        
         #region Image Chooser
         private void btnChooseImage_Click(object sender, EventArgs e)
         {
@@ -95,7 +96,7 @@ namespace Dropify
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    string filePath = openFileDialog.FileName;
+                    filePath = openFileDialog.FileName;
 
                     if (IsValidImage(filePath))
                     {
@@ -571,6 +572,8 @@ namespace Dropify
                     Zip = userAddress.address.Zip,
                     Landmark = userAddress.address.Landmark
                 };
+                ToBeUser.ProfilePicture = filePath != null ? Image.FromFile(filePath) : Properties.Resources.Avatar_Default;
+                ToBeUser.DOB = dtpDOB.Value;
                 ToBeUser.GovtIDType = cbxGovtIDType.SelectedItem.ToString();
                 ToBeUser.GovtID = tbxGovtID.Text;
                 ToBeUser.PasswordHash = HashProvider.CalculateSHA256(tbxConfirmPassword.Text);

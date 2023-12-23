@@ -99,6 +99,8 @@ namespace Dropify
             // 
             // lblSubtitle
             // 
+            this.lblSubtitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSubtitle.AutoSize = true;
             this.lblSubtitle.Font = new System.Drawing.Font("Segoe UI Semilight", 20F);
             this.lblSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(152)))), ((int)(((byte)(29)))));
@@ -110,6 +112,8 @@ namespace Dropify
             // 
             // lblSecurity
             // 
+            this.lblSecurity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSecurity.AutoSize = true;
             this.lblSecurity.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.lblSecurity.ForeColor = System.Drawing.Color.Gray;
@@ -121,6 +125,8 @@ namespace Dropify
             // 
             // cbxSecurityQues
             // 
+            this.cbxSecurityQues.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxSecurityQues.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSecurityQues.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
             this.cbxSecurityQues.FormattingEnabled = true;
@@ -137,6 +143,8 @@ namespace Dropify
             // 
             // tbxSecurityAns
             // 
+            this.tbxSecurityAns.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbxSecurityAns.BackColor = System.Drawing.Color.White;
             this.tbxSecurityAns.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxSecurityAns.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
@@ -150,6 +158,8 @@ namespace Dropify
             // 
             // lblSecurityAns
             // 
+            this.lblSecurityAns.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSecurityAns.AutoSize = true;
             this.lblSecurityAns.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.lblSecurityAns.ForeColor = System.Drawing.Color.Gray;
@@ -161,6 +171,7 @@ namespace Dropify
             // 
             // btnVerify
             // 
+            this.btnVerify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVerify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnVerify.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnVerify.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(152)))), ((int)(((byte)(29)))));
@@ -178,6 +189,8 @@ namespace Dropify
             // 
             // tbxOTP
             // 
+            this.tbxOTP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbxOTP.BackColor = System.Drawing.Color.White;
             this.tbxOTP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxOTP.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
@@ -190,6 +203,8 @@ namespace Dropify
             // 
             // lblOTP
             // 
+            this.lblOTP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOTP.AutoSize = true;
             this.lblOTP.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.lblOTP.ForeColor = System.Drawing.Color.Gray;
@@ -201,6 +216,8 @@ namespace Dropify
             // 
             // btnSave
             // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnSave.Enabled = false;
             this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -219,6 +236,7 @@ namespace Dropify
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Location = new System.Drawing.Point(735, 215);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(165, 165);
@@ -228,6 +246,7 @@ namespace Dropify
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.label2.ForeColor = System.Drawing.Color.Gray;

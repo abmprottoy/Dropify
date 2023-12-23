@@ -29,30 +29,38 @@ namespace Dropify
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserUI));
             this.btnProfile = new System.Windows.Forms.Button();
             this.cbxAccount = new System.Windows.Forms.ComboBox();
             this.pnlTitle = new System.Windows.Forms.Panel();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.lblFirstName = new System.Windows.Forms.Label();
-            this.lblLastName = new System.Windows.Forms.Label();
             this.btnTrack = new System.Windows.Forms.Button();
             this.btnHistory = new System.Windows.Forms.Button();
             this.btnCourier = new System.Windows.Forms.Button();
             this.btnParcel = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblTimezoneTime = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblCopyright = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tTimezoneTime = new System.Windows.Forms.Timer(this.components);
             this.pnlTitle.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnProfile
             // 
             this.btnProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnProfile.BackgroundImage = global::Dropify.Properties.Resources.Avatar_Default;
+            this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnProfile.Location = new System.Drawing.Point(1081, 20);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(70, 70);
             this.btnProfile.TabIndex = 0;
-            this.btnProfile.Text = "button1";
             this.btnProfile.UseVisualStyleBackColor = true;
             // 
             // cbxAccount
@@ -80,6 +88,33 @@ namespace Dropify
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(1163, 110);
             this.pnlTitle.TabIndex = 2;
+            // 
+            // lblLastName
+            // 
+            this.lblLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLastName.AutoEllipsis = true;
+            this.lblLastName.Font = new System.Drawing.Font("Segoe UI Semilight", 15F);
+            this.lblLastName.ForeColor = System.Drawing.Color.White;
+            this.lblLastName.Location = new System.Drawing.Point(982, 62);
+            this.lblLastName.MaximumSize = new System.Drawing.Size(93, 28);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(93, 28);
+            this.lblLastName.TabIndex = 4;
+            this.lblLastName.Text = "last name";
+            this.lblLastName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblFirstName
+            // 
+            this.lblFirstName.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblFirstName.Font = new System.Drawing.Font("Segoe UI Semilight", 21F);
+            this.lblFirstName.ForeColor = System.Drawing.Color.White;
+            this.lblFirstName.Location = new System.Drawing.Point(802, 20);
+            this.lblFirstName.MaximumSize = new System.Drawing.Size(335, 38);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(279, 38);
+            this.lblFirstName.TabIndex = 3;
+            this.lblFirstName.Text = "first name";
+            this.lblFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl
             // 
@@ -116,35 +151,9 @@ namespace Dropify
             this.btnBack.Text = "";
             this.btnBack.UseVisualStyleBackColor = true;
             // 
-            // lblFirstName
-            // 
-            this.lblFirstName.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblFirstName.Font = new System.Drawing.Font("Segoe UI Semilight", 21F);
-            this.lblFirstName.ForeColor = System.Drawing.Color.White;
-            this.lblFirstName.Location = new System.Drawing.Point(802, 20);
-            this.lblFirstName.MaximumSize = new System.Drawing.Size(335, 38);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(279, 38);
-            this.lblFirstName.TabIndex = 3;
-            this.lblFirstName.Text = "first name";
-            this.lblFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblLastName
-            // 
-            this.lblLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLastName.AutoEllipsis = true;
-            this.lblLastName.Font = new System.Drawing.Font("Segoe UI Semilight", 15F);
-            this.lblLastName.ForeColor = System.Drawing.Color.White;
-            this.lblLastName.Location = new System.Drawing.Point(982, 62);
-            this.lblLastName.MaximumSize = new System.Drawing.Size(93, 28);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(93, 28);
-            this.lblLastName.TabIndex = 4;
-            this.lblLastName.Text = "last name";
-            this.lblLastName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // btnTrack
             // 
+            this.btnTrack.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnTrack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTrack.Image = global::Dropify.Properties.Resources.TrackTile;
             this.btnTrack.Location = new System.Drawing.Point(876, 206);
@@ -155,6 +164,7 @@ namespace Dropify
             // 
             // btnHistory
             // 
+            this.btnHistory.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHistory.Image = global::Dropify.Properties.Resources.CheckHistory;
             this.btnHistory.Location = new System.Drawing.Point(598, 206);
@@ -165,6 +175,7 @@ namespace Dropify
             // 
             // btnCourier
             // 
+            this.btnCourier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCourier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCourier.Image = global::Dropify.Properties.Resources.CourierTile;
             this.btnCourier.Location = new System.Drawing.Point(321, 206);
@@ -175,6 +186,7 @@ namespace Dropify
             // 
             // btnParcel
             // 
+            this.btnParcel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnParcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnParcel.Image = global::Dropify.Properties.Resources.ParcelTile;
             this.btnParcel.Location = new System.Drawing.Point(45, 206);
@@ -183,12 +195,52 @@ namespace Dropify
             this.btnParcel.TabIndex = 3;
             this.btnParcel.UseVisualStyleBackColor = true;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(78)))));
+            this.statusStrip1.GripMargin = new System.Windows.Forms.Padding(0);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblTimezoneTime,
+            this.lblCopyright});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1163, 22);
+            this.statusStrip1.SizingGrip = false;
+            this.statusStrip1.TabIndex = 7;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblTimezoneTime
+            // 
+            this.lblTimezoneTime.ForeColor = System.Drawing.Color.White;
+            this.lblTimezoneTime.Name = "lblTimezoneTime";
+            this.lblTimezoneTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTimezoneTime.Size = new System.Drawing.Size(558, 17);
+            this.lblTimezoneTime.Spring = true;
+            this.lblTimezoneTime.Text = "Current Time";
+            this.lblTimezoneTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblCopyright
+            // 
+            this.lblCopyright.ForeColor = System.Drawing.Color.White;
+            this.lblCopyright.Name = "lblCopyright";
+            this.lblCopyright.Size = new System.Drawing.Size(558, 17);
+            this.lblCopyright.Spring = true;
+            this.lblCopyright.Text = "© 2023 Dropify Inc.";
+            this.lblCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tTimezoneTime
+            // 
+            this.tTimezoneTime.Enabled = true;
+            this.tTimezoneTime.Interval = 1000;
+            this.tTimezoneTime.Tick += new System.EventHandler(this.tTimezoneTime_Tick);
+            // 
             // UserUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1163, 450);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnTrack);
             this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.btnCourier);
@@ -196,10 +248,14 @@ namespace Dropify
             this.Controls.Add(this.pnlTitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserUI";
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -217,5 +273,9 @@ namespace Dropify
         private System.Windows.Forms.Button btnCourier;
         private System.Windows.Forms.Button btnHistory;
         private System.Windows.Forms.Button btnTrack;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblTimezoneTime;
+        private System.Windows.Forms.ToolStripStatusLabel lblCopyright;
+        private System.Windows.Forms.Timer tTimezoneTime;
     }
 }

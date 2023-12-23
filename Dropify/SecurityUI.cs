@@ -21,7 +21,7 @@ namespace Dropify
         private string base32SecretKey;
         private string uriString;
         private bool isAnsEmpty;
-        private int launchWindow; // 0 - SignUp, 1 - SignIn
+        private int launchWindow; // 0 - SignUp, 1 - SignIn, 2- Manager
 
 
         public SecurityUI(Guid ProfileID, string Email, int parentWindow)
@@ -143,16 +143,7 @@ namespace Dropify
             else
             {
                 AddSecurityInfo();
-                if (launchWindow == 0)
-                {
-                    SignupUI signupUI = new SignupUI();
-                    signupUI.Show();
-                }
-                else if (launchWindow == 1)
-                {
-                    SigninUI signinUI = new SigninUI();
-                    signinUI.Show();
-                }
+                Router();
                 this.Hide();
             }
         }
@@ -167,18 +158,7 @@ namespace Dropify
             switch (result)
             {
                 case DialogResult.Yes:
-                    
-                    if(launchWindow == 0)
-                    {
-                        SignupUI signupUI = new SignupUI();
-                        signupUI.Show();
-                    }else if(launchWindow == 1)
-                    {
-                        SigninUI signinUI = new SigninUI();
-                        signinUI.Show();
-                    }
-                    
-                    
+                    Router();
                     this.Hide();
                     break;
 
@@ -187,6 +167,23 @@ namespace Dropify
 
                 case DialogResult.Cancel:
                     break;
+            }
+        }
+
+        private void Router()
+        {
+            if (launchWindow == 0)
+            {
+                SignupUI signupUI = new SignupUI();
+                signupUI.Show();
+            }
+            else if (launchWindow == 1)
+            {
+                SigninUI signinUI = new SigninUI();
+                signinUI.Show();
+            }else if (launchWindow == 2)
+            {
+                //To-Do: Manager
             }
         }
     }
