@@ -1,7 +1,7 @@
 ﻿
 namespace Dropify
 {
-    partial class TextViewer
+    partial class TextViewerUI
     {
         /// <summary>
         /// Required designer variable.

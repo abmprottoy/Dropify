@@ -1,7 +1,7 @@
 ﻿
 namespace Dropify
 {
-    partial class UserUI
+    partial class HistoryUI
     {
         /// <summary>
         /// Required designer variable.
@@ -30,70 +30,26 @@ namespace Dropify
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserUI));
-            this.btnProfile = new System.Windows.Forms.Button();
-            this.cbxAccount = new System.Windows.Forms.ComboBox();
-            this.pnlTitle = new System.Windows.Forms.Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistoryUI));
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
+            this.cbxAccount = new System.Windows.Forms.ComboBox();
+            this.btnProfile = new System.Windows.Forms.Button();
+            this.pnlTitle = new System.Windows.Forms.Panel();
             this.lbl = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnTrack = new System.Windows.Forms.Button();
-            this.btnHistory = new System.Windows.Forms.Button();
-            this.btnCourier = new System.Windows.Forms.Button();
-            this.btnParcel = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblTimezoneTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblCurrency = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblCopyright = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tTimezoneTime = new System.Windows.Forms.Timer(this.components);
+            this.tTimeZoneTimer = new System.Windows.Forms.Timer(this.components);
+            this.dgvHistory = new System.Windows.Forms.DataGridView();
             this.pnlTitle.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnProfile
-            // 
-            this.btnProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnProfile.BackgroundImage = global::Dropify.Properties.Resources.Avatar_Default;
-            this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnProfile.Location = new System.Drawing.Point(1092, 20);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(70, 70);
-            this.btnProfile.TabIndex = 0;
-            this.btnProfile.UseVisualStyleBackColor = true;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
-            // 
-            // cbxAccount
-            // 
-            this.cbxAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxAccount.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
-            this.cbxAccount.FormattingEnabled = true;
-            this.cbxAccount.Items.AddRange(new object[] {
-            "Settings",
-            "Logout"});
-            this.cbxAccount.Location = new System.Drawing.Point(1092, 62);
-            this.cbxAccount.Name = "cbxAccount";
-            this.cbxAccount.Size = new System.Drawing.Size(70, 28);
-            this.cbxAccount.TabIndex = 1;
-            this.cbxAccount.SelectedIndexChanged += new System.EventHandler(this.cbxAccount_SelectedIndexChanged);
-            // 
-            // pnlTitle
-            // 
-            this.pnlTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(78)))));
-            this.pnlTitle.Controls.Add(this.lblLastName);
-            this.pnlTitle.Controls.Add(this.lblFirstName);
-            this.pnlTitle.Controls.Add(this.lbl);
-            this.pnlTitle.Controls.Add(this.lblTitle);
-            this.pnlTitle.Controls.Add(this.btnBack);
-            this.pnlTitle.Controls.Add(this.btnProfile);
-            this.pnlTitle.Controls.Add(this.cbxAccount);
-            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitle.Location = new System.Drawing.Point(0, 0);
-            this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(1174, 110);
-            this.pnlTitle.TabIndex = 2;
             // 
             // lblLastName
             // 
@@ -121,6 +77,48 @@ namespace Dropify
             this.lblFirstName.TabIndex = 3;
             this.lblFirstName.Text = "first name";
             this.lblFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cbxAccount
+            // 
+            this.cbxAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxAccount.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
+            this.cbxAccount.FormattingEnabled = true;
+            this.cbxAccount.Items.AddRange(new object[] {
+            "Logout"});
+            this.cbxAccount.Location = new System.Drawing.Point(1092, 62);
+            this.cbxAccount.Name = "cbxAccount";
+            this.cbxAccount.Size = new System.Drawing.Size(70, 28);
+            this.cbxAccount.TabIndex = 1;
+            this.cbxAccount.SelectedIndexChanged += new System.EventHandler(this.cbxAccount_SelectedIndexChanged);
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnProfile.BackgroundImage = global::Dropify.Properties.Resources.Avatar_Default;
+            this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnProfile.Location = new System.Drawing.Point(1092, 20);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(70, 70);
+            this.btnProfile.TabIndex = 0;
+            this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            // 
+            // pnlTitle
+            // 
+            this.pnlTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(78)))));
+            this.pnlTitle.Controls.Add(this.lblLastName);
+            this.pnlTitle.Controls.Add(this.lblFirstName);
+            this.pnlTitle.Controls.Add(this.lbl);
+            this.pnlTitle.Controls.Add(this.lblTitle);
+            this.pnlTitle.Controls.Add(this.btnBack);
+            this.pnlTitle.Controls.Add(this.btnProfile);
+            this.pnlTitle.Controls.Add(this.cbxAccount);
+            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitle.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitle.Name = "pnlTitle";
+            this.pnlTitle.Size = new System.Drawing.Size(1174, 110);
+            this.pnlTitle.TabIndex = 8;
             // 
             // lbl
             // 
@@ -158,54 +156,6 @@ namespace Dropify
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnTrack
-            // 
-            this.btnTrack.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnTrack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTrack.Image = global::Dropify.Properties.Resources.TrackTile;
-            this.btnTrack.Location = new System.Drawing.Point(877, 213);
-            this.btnTrack.Name = "btnTrack";
-            this.btnTrack.Size = new System.Drawing.Size(250, 141);
-            this.btnTrack.TabIndex = 6;
-            this.btnTrack.UseVisualStyleBackColor = true;
-            this.btnTrack.Click += new System.EventHandler(this.btnTrack_Click);
-            // 
-            // btnHistory
-            // 
-            this.btnHistory.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHistory.Image = global::Dropify.Properties.Resources.CheckHistory;
-            this.btnHistory.Location = new System.Drawing.Point(599, 213);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(250, 141);
-            this.btnHistory.TabIndex = 5;
-            this.btnHistory.UseVisualStyleBackColor = true;
-            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
-            // 
-            // btnCourier
-            // 
-            this.btnCourier.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCourier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCourier.Image = global::Dropify.Properties.Resources.CourierTile;
-            this.btnCourier.Location = new System.Drawing.Point(322, 213);
-            this.btnCourier.Name = "btnCourier";
-            this.btnCourier.Size = new System.Drawing.Size(250, 141);
-            this.btnCourier.TabIndex = 4;
-            this.btnCourier.UseVisualStyleBackColor = true;
-            this.btnCourier.Click += new System.EventHandler(this.btnCourier_Click);
-            // 
-            // btnParcel
-            // 
-            this.btnParcel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnParcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnParcel.Image = global::Dropify.Properties.Resources.ParcelTile;
-            this.btnParcel.Location = new System.Drawing.Point(46, 213);
-            this.btnParcel.Name = "btnParcel";
-            this.btnParcel.Size = new System.Drawing.Size(250, 141);
-            this.btnParcel.TabIndex = 3;
-            this.btnParcel.UseVisualStyleBackColor = true;
-            this.btnParcel.Click += new System.EventHandler(this.btnParcel_Click);
-            // 
             // statusStrip1
             // 
             this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(78)))));
@@ -218,7 +168,7 @@ namespace Dropify
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1174, 24);
             this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 7;
+            this.statusStrip1.TabIndex = 9;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // lblTimezoneTime
@@ -248,32 +198,52 @@ namespace Dropify
             this.lblCopyright.Text = "© 2023 Dropify Inc.";
             this.lblCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // tTimezoneTime
+            // tTimeZoneTimer
             // 
-            this.tTimezoneTime.Enabled = true;
-            this.tTimezoneTime.Interval = 1000;
-            this.tTimezoneTime.Tick += new System.EventHandler(this.tTimezoneTime_Tick);
+            this.tTimeZoneTimer.Interval = 1000;
+            this.tTimeZoneTimer.Tick += new System.EventHandler(this.tTimeZoneTimer_Tick);
             // 
-            // UserUI
+            // dgvHistory
+            // 
+            this.dgvHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHistory.BackgroundColor = System.Drawing.Color.White;
+            this.dgvHistory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHistory.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvHistory.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dgvHistory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(78)))));
+            this.dgvHistory.Location = new System.Drawing.Point(0, 110);
+            this.dgvHistory.Name = "dgvHistory";
+            this.dgvHistory.ReadOnly = true;
+            this.dgvHistory.Size = new System.Drawing.Size(1174, 362);
+            this.dgvHistory.TabIndex = 10;
+            // 
+            // HistoryUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1174, 496);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.btnTrack);
-            this.Controls.Add(this.btnHistory);
-            this.Controls.Add(this.btnCourier);
-            this.Controls.Add(this.btnParcel);
+            this.Controls.Add(this.dgvHistory);
             this.Controls.Add(this.pnlTitle);
+            this.Controls.Add(this.statusStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "UserUI";
+            this.Name = "HistoryUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dropify - User";
+            this.Text = "HistoryUI";
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,22 +251,19 @@ namespace Dropify
 
         #endregion
 
-        private System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.Label lblLastName;
+        private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.ComboBox cbxAccount;
+        private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Panel pnlTitle;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Label lblLastName;
-        private System.Windows.Forms.Button btnParcel;
-        private System.Windows.Forms.Button btnCourier;
-        private System.Windows.Forms.Button btnHistory;
-        private System.Windows.Forms.Button btnTrack;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblTimezoneTime;
-        private System.Windows.Forms.ToolStripStatusLabel lblCopyright;
-        private System.Windows.Forms.Timer tTimezoneTime;
         private System.Windows.Forms.ToolStripStatusLabel lblCurrency;
-        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.ToolStripStatusLabel lblCopyright;
+        private System.Windows.Forms.Timer tTimeZoneTimer;
+        private System.Windows.Forms.DataGridView dgvHistory;
     }
 }

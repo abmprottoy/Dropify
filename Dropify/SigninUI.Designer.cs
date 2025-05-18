@@ -90,6 +90,7 @@ namespace Dropify
             this.btnForgotPass.TabIndex = 5;
             this.btnForgotPass.Text = "Forgot your password?";
             this.btnForgotPass.UseVisualStyleBackColor = true;
+            this.btnForgotPass.Click += new System.EventHandler(this.btnForgotPass_Click);
             // 
             // btnSignUp
             // 
@@ -288,6 +289,7 @@ namespace Dropify
             // 
             // SigninUI
             // 
+            this.AcceptButton = this.btnSignIn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 521);

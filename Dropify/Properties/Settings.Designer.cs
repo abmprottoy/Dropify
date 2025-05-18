@@ -26,8 +26,8 @@ namespace Dropify.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PROTTOY-PC\\PRDBSERVER;Initial Catalog=DropifyTest;Integrated Security" +
-            "=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PROTTOY-PC\\PRDBSERVER;Initial Catalog=Playground;Integrated Security=" +
+            "True")]
         public string ConnectionString {
             get {
                 return ((string)(this["ConnectionString"]));

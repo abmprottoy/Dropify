@@ -21,7 +21,7 @@ namespace Dropify
         private string base32SecretKey;
         private string uriString;
         private bool isAnsEmpty;
-        private int launchWindow; // 0 - SignUp, 1 - SignIn, 2- Manager
+        private int launchWindow; // 0 - SignUp, 1 - SignIn
 
 
         public SecurityUI(Guid ProfileID, string Email, int parentWindow)

@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Dropify
 {
-    public partial class AddressPicker : BaseForm
+    public partial class AddressPickerUI : BaseForm
     {
         public Address address = new Address();
         public bool OfficePicker;
@@ -27,7 +27,7 @@ namespace Dropify
         /// Basic AddressPicker where everything is user selectable.
         /// </summary>
         /// <param name="title"></param>
-        public AddressPicker(string title)
+        public AddressPickerUI(string title)
         {
             InitializeComponent();
             InitializeTitle(title);
@@ -43,7 +43,7 @@ namespace Dropify
         /// </summary>
         /// <param name="title">Sets title for the AddressPicker</param>
         /// <param name="officePicker">Whether the AdressPicker is OfficePicker Kind</param>
-        public AddressPicker(string title, bool officePicker)
+        public AddressPickerUI(string title, bool officePicker)
         {
             InitializeComponent();
             InitializeTitle(title);
@@ -112,7 +112,7 @@ namespace Dropify
         /// </summary>
         /// <param name="title"></param>
         /// <param name="countryIndex"></param>
-        public AddressPicker(string title, int countryIndex)
+        public AddressPickerUI(string title, int countryIndex)
         {
             InitializeComponent();
             InitializeTitle(title);
@@ -140,7 +140,7 @@ namespace Dropify
         /// <param name="title"></param>
         /// <param name="countryIndex"></param>
         /// <param name="cityIndex"></param>
-        public AddressPicker(string title, int countryIndex, int cityIndex)
+        public AddressPickerUI(string title, int countryIndex, int cityIndex)
         {
             InitializeComponent();
             InitializeTitle(title);
@@ -194,13 +194,14 @@ namespace Dropify
             this.Hide();
         }
 
-
+        public int selectedCityIndex;
+        public int selectedCountryIndex;
         private void cbxCountry_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (SimplePicker)
             {
                 string selectedCountry = cbxCountry.SelectedItem as string;
-
+                selectedCountryIndex = cbxCountry.SelectedIndex;
                 // Check if the selected country is in the dictionary
                 if (CountryCities.ContainsKey(selectedCountry))
                 {
@@ -211,10 +212,29 @@ namespace Dropify
                 }
             }
         }
+        private void cbxCity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (SimplePicker)
+            { 
+                selectedCityIndex = cbxCity.SelectedIndex;
+            }
+        }
+
+        public int RetriveCountryIndex()
+        {
+            return selectedCountryIndex;
+        }
+
+        public int RetriveCityIndex()
+        {
+            return selectedCityIndex;
+        }
+
         public Address RetriveData()
         {
             return address;
         }
+
     }
 
 

@@ -50,7 +50,7 @@ namespace Dropify
                 try
                 {
                     string profileQuery = "INSERT INTO Login (ProfileID, PasswordHash, Role, Email, CountryCode, Phone, ProfileStatus) VALUES (@ProfileID, @PasswordHash, @Role, @Email, @CountryCode, @Phone, @ProfileStatus)";
-                    string addressQuery = "INSERT INTO Address (AddressID, Country, City, Area, ZIP, Landmark) VALUES (@AddressID, @Country, @City, @Area, @ZIP, @Landmark)";
+                    string addressQuery = "INSERT INTO Address (AddressID, Country, City, Area, ZIP, Landmark, Type) VALUES (@AddressID, @Country, @City, @Area, @ZIP, @Landmark, @Type)";
                     string personalInfoQuery = "INSERT INTO PersonalInfo (ProfileID, ProfileImage, FirstName, LastName, DOB, Gender, Country, GovtIDType, GovtID, AddressID) VALUES (@ProfileID, @ProfileImage, @FirstName, @LastName, @DOB, @Gender, @Country, @GovtIDType, @GovtID, @AddressID)";
                     string userInfoQuery = "INSERT INTO UserInfo (ProfileID, TimeZoneID, Currency, UserSince) VALUES (@ProfileID, @TimeZoneID, @Currency, @UserSince)";
 
@@ -85,9 +85,9 @@ namespace Dropify
                             addressCommand.Parameters.AddWithValue("@Country", user.address.Country);
                             addressCommand.Parameters.AddWithValue("@City", user.address.City);
                             addressCommand.Parameters.AddWithValue("@Area", user.address.Area);
-                            //addressCommand.Parameters.AddWithValue("@Address", null);
                             addressCommand.Parameters.AddWithValue("@ZIP", user.address.Zip);
                             addressCommand.Parameters.AddWithValue("@Landmark", user.address.Landmark);
+                            addressCommand.Parameters.AddWithValue("@Type", "Profile");
                             //No office field needed because this is user sign up.
 
                             addressCommand.ExecuteNonQuery();
@@ -135,6 +135,8 @@ namespace Dropify
 
         public User GetUserInfo(User userInfo, Guid profileID)
         {
+
+            userInfo.address = new Address();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -198,6 +200,67 @@ namespace Dropify
             using (MemoryStream ms = new MemoryStream(byteArray))
             {
                 return Image.FromStream(ms);
+            }
+        }
+
+
+        public bool DeleteUser(User user)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (SqlTransaction transaction = connection.BeginTransaction())
+                    {
+                        try
+                        {
+                            string deleteLoginQuery = "DELETE FROM Login WHERE ProfileID = @ProfileID";
+                            using (SqlCommand command = new SqlCommand(deleteLoginQuery, connection, transaction))
+                            {
+                                command.Parameters.AddWithValue("@ProfileID", user.ProfileID);
+                                int loginRowsAffected = command.ExecuteNonQuery();
+
+
+                                if (loginRowsAffected > 0)
+                                {
+
+                                    string deleteAddressQuery = "DELETE FROM Address WHERE AddressID = @AddressID";
+                                    using (SqlCommand addressCommand = new SqlCommand(deleteAddressQuery, connection, transaction))
+                                    {
+                                        addressCommand.Parameters.AddWithValue("@AddressID", user.address.AddressID);
+                                        int addressRowsAffected = addressCommand.ExecuteNonQuery();
+
+                                        if (addressRowsAffected > 0)
+                                        {
+
+                                            transaction.Commit();
+                                            return true;
+                                        }
+                                    }
+                                }
+                            }
+
+
+                            transaction.Rollback();
+                            return false;
+                        }
+                        catch (Exception ex)
+                        {
+                            // Handle exceptions here
+                            MessageBox.Show("Error while Deleting", ex.Message);
+                            transaction.Rollback();
+                            return false;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle connection-related exceptions here
+                MessageBox.Show("Connection Error: " + ex.Message);
+                return false;
             }
         }
 

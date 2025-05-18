@@ -204,10 +204,10 @@ namespace Dropify
             capctchaText = CaptchaProvider.LastCaptcha;
         }
 
-        public AddressPicker userAddress;
+        public AddressPickerUI userAddress;
         private void btnSetAddress_Click(object sender, EventArgs e)
         {
-            using (userAddress = new AddressPicker("user", cbxCountry.SelectedIndex))
+            using (userAddress = new AddressPickerUI("user", cbxCountry.SelectedIndex))
             {
                 userAddress.ShowDialog();
                 tbxAddress.Text = userAddress.address.ToString();

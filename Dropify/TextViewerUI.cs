@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Dropify
 {
-    public partial class TextViewer : Form
+    public partial class TextViewerUI : Form
     {
-        public TextViewer()
+        public TextViewerUI()
         {
             InitializeComponent();
         }

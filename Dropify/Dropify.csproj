@@ -55,18 +55,61 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activation.cs">
+    <Compile Include="AdminInformationViewerUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Activation.Designer.cs">
-      <DependentUpon>Activation.cs</DependentUpon>
+    <Compile Include="AdminInformationViewerUI.Designer.cs">
+      <DependentUpon>AdminInformationViewerUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Address.cs" />
-    <Compile Include="AddressPicker.cs">
+    <Compile Include="AdminUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddressPicker.Designer.cs">
-      <DependentUpon>AddressPicker.cs</DependentUpon>
+    <Compile Include="AdminUI.Designer.cs">
+      <DependentUpon>AdminUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bKashUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="bKashUserControl.Designer.cs">
+      <DependentUpon>bKashUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardPaymentUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CardPaymentUserControl.Designer.cs">
+      <DependentUpon>CardPaymentUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CostManagementUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CostManagementUI.Designer.cs">
+      <DependentUpon>CostManagementUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\ModernComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\ModernListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DeleteUserUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteUserUI.Designer.cs">
+      <DependentUpon>DeleteUserUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity Classes\Delivery.cs" />
+    <Compile Include="DeliveryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeliveryUI.Designer.cs">
+      <DependentUpon>DeliveryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity Classes\Address.cs" />
+    <Compile Include="AddressPickerUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddressPickerUI.Designer.cs">
+      <DependentUpon>AddressPickerUI.cs</DependentUpon>
     </Compile>
     <Compile Include="BaseForm.cs">
       <SubType>Form</SubType>
@@ -76,9 +119,79 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Captcha.resx</DependentUpon>
     </Compile>
-    <Compile Include="CaptchaProvider.cs" />
-    <Compile Include="CurrencyProvider.cs" />
-    <Compile Include="HashProvider.cs" />
+    <Compile Include="Enums\SystemRolesEnum.cs" />
+    <Compile Include="ForgotPasswordUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPasswordUI.Designer.cs">
+      <DependentUpon>ForgotPasswordUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryUI.Designer.cs">
+      <DependentUpon>HistoryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordChangeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PasswordChangeUserControl.Designer.cs">
+      <DependentUpon>PasswordChangeUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentUI.Designer.cs">
+      <DependentUpon>PaymentUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityLogUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SecurityLogUI.Designer.cs">
+      <DependentUpon>SecurityLogUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemInformationUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemInformationUI.Designer.cs">
+      <DependentUpon>SystemInformationUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemInformationUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemInformationUserControl.Designer.cs">
+      <DependentUpon>SystemInformationUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemMaintenenceUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemMaintenenceUserControl.Designer.cs">
+      <DependentUpon>SystemMaintenenceUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrackDeliveryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrackDeliveryUI.Designer.cs">
+      <DependentUpon>TrackDeliveryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInformationUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInformationUI.Designer.cs">
+      <DependentUpon>UserInformationUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserSettingsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserSettingsUI.Designer.cs">
+      <DependentUpon>UserSettingsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility Providers\CaptchaProvider.cs" />
+    <Compile Include="Utility Providers\CostProvider.cs" />
+    <Compile Include="Utility Providers\CurrencyProvider.cs" />
+    <Compile Include="Utility Providers\HashProvider.cs" />
+    <Compile Include="Utility Providers\IdentityProvider.cs" />
+    <Compile Include="Utility Providers\SecurityLog.cs" />
     <Compile Include="SecurityUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,29 +212,63 @@
     <Compile Include="SignupUI.Designer.cs">
       <DependentUpon>SignupUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="TextViewer.cs">
+    <Compile Include="TextViewerUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TextViewer.Designer.cs">
-      <DependentUpon>TextViewer.cs</DependentUpon>
+    <Compile Include="TextViewerUI.Designer.cs">
+      <DependentUpon>TextViewerUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="TimeZoneInfoProvider.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Utility Providers\TimeZoneInfoProvider.cs" />
+    <Compile Include="Entity Classes\Transaction.cs" />
+    <Compile Include="Entity Classes\User.cs" />
     <Compile Include="UserUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserUI.Designer.cs">
       <DependentUpon>UserUI.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Activation.resx">
-      <DependentUpon>Activation.cs</DependentUpon>
+    <EmbeddedResource Include="AddressPickerUI.resx">
+      <DependentUpon>AddressPickerUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddressPicker.resx">
-      <DependentUpon>AddressPicker.cs</DependentUpon>
+    <EmbeddedResource Include="AdminInformationViewerUI.resx">
+      <DependentUpon>AdminInformationViewerUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI.resx">
+      <DependentUpon>AdminUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bKashUserControl.resx">
+      <DependentUpon>bKashUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Captcha.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Captcha.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardPaymentUserControl.resx">
+      <DependentUpon>CardPaymentUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CostManagementUI.resx">
+      <DependentUpon>CostManagementUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteUserUI.resx">
+      <DependentUpon>DeleteUserUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeliveryUI.resx">
+      <DependentUpon>DeliveryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPasswordUI.resx">
+      <DependentUpon>ForgotPasswordUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryUI.resx">
+      <DependentUpon>HistoryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordChangeUserControl.resx">
+      <DependentUpon>PasswordChangeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentUI.resx">
+      <DependentUpon>PaymentUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityLogUI.resx">
+      <DependentUpon>SecurityLogUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SecurityUI.resx">
       <DependentUpon>SecurityUI.cs</DependentUpon>
@@ -142,12 +289,31 @@
     <EmbeddedResource Include="SignupUI.resx">
       <DependentUpon>SignupUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TextViewer.resx">
-      <DependentUpon>TextViewer.cs</DependentUpon>
+    <EmbeddedResource Include="SystemInformationUI.resx">
+      <DependentUpon>SystemInformationUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemInformationUserControl.resx">
+      <DependentUpon>SystemInformationUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemMaintenenceUserControl.resx">
+      <DependentUpon>SystemMaintenenceUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextViewerUI.resx">
+      <DependentUpon>TextViewerUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackDeliveryUI.resx">
+      <DependentUpon>TrackDeliveryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInformationUI.resx">
+      <DependentUpon>UserInformationUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSettingsUI.resx">
+      <DependentUpon>UserSettingsUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserUI.resx">
       <DependentUpon>UserUI.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -284,6 +450,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TrackTile.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Parcel Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_bKash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Mastercard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Visa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Amex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_WhiteVisa.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_PinkBkash.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_BlueAmex.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_GrayMastercard.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Courier Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HandleWithCareIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FragileIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlammableIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

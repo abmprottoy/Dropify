@@ -34,5 +34,19 @@ namespace Dropify
 
             return String.Empty;
         }
+
+
+        public static DateTime GetCityTime(string cityName)
+        {
+            TimeZoneInfo timeZoneInfo;
+            DateTime dateTime;
+             
+            timeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById(GetTimeZone(cityName));
+            dateTime = TimeZoneInfo.ConvertTime(DateTime.Now, timeZoneInfo);
+            
+            return dateTime;
+        } 
+
+
     }
 }

@@ -148,6 +148,18 @@
   <data name="CourierTile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CourierTile.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Courier_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Courier Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlammableIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FlammableIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FragileIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FragileIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HandleWithCareIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HandleWithCareIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="HeroImage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HeroImage1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,8 +187,35 @@
   <data name="HeroImage9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HeroImage9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon_Amex" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Amex.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_bKash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_bKash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_BlueAmex" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_BlueAmex.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_GrayMastercard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_GrayMastercard.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Mastercard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Mastercard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_PinkBkash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_PinkBkash.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Visa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_Visa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_WhiteVisa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_WhiteVisa.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ParcelTile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ParcelTile.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Parcel_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parcel Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TrackTile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TrackTile.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

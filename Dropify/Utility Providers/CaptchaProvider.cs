@@ -26,7 +26,7 @@ namespace Dropify
             LastCaptcha = Path.GetFileNameWithoutExtension(captchaImage);
 
             Image image = (Image)Captcha.ResourceManager.GetObject(LastCaptcha);
-            Console.WriteLine(LastCaptcha);
+            //Console.WriteLine(LastCaptcha);
             return image;
         }
 

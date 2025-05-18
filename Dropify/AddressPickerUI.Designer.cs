@@ -1,7 +1,7 @@
 ﻿
 namespace Dropify
 {
-    partial class AddressPicker
+    partial class AddressPickerUI
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Dropify
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddressPicker));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddressPickerUI));
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.lbl = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -242,8 +242,9 @@ namespace Dropify
             this.cbxCity.Name = "cbxCity";
             this.cbxCity.Size = new System.Drawing.Size(281, 28);
             this.cbxCity.TabIndex = 2;
+            this.cbxCity.SelectedIndexChanged += new System.EventHandler(this.cbxCity_SelectedIndexChanged);
             // 
-            // AddressPicker
+            // AddressPickerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -251,7 +252,7 @@ namespace Dropify
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.pnlTitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "AddressPicker";
+            this.Name = "AddressPickerUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Choose Address";
             this.pnlTitle.ResumeLayout(false);

@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Dropify
 {
-    public partial class Activation : Form
+    public partial class bKashUserControl : UserControl
     {
-        public Activation()
+        public bKashUserControl(decimal amount)
         {
             InitializeComponent();
+
+            lblAmount.Text = amount.ToString();
         }
     }
 }

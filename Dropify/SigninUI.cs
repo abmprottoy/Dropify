@@ -20,7 +20,7 @@ namespace Dropify
             base.WindowCorner = 3;
 
             LoadRandomImage();
-
+            
         }
 
 
@@ -33,9 +33,7 @@ namespace Dropify
         }
 
 
-        #region Sign In
-        
-        #endregion Sign In
+      
 
 
 
@@ -127,7 +125,11 @@ namespace Dropify
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            InitiateLogin();
+            if(status == "Connected" || tbxEmail.Text == "admin@dropify.com")
+            {
+                InitiateLogin();
+            }
+            
         }
 
         private void InitiateLogin()
@@ -154,6 +156,10 @@ namespace Dropify
                         if (count == 1)
                         {
                             GetProfileStatus();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Email/Phone or password is incorrect.", "Invalid credentials");
                         }
                     }
                 }
@@ -187,13 +193,19 @@ namespace Dropify
                                 Guid profileID = (Guid)reader["ProfileID"];
                                 string role = reader["Role"] as string;
 
+                               
+                                SecurityLog.Add(profileID, "Login");
 
-                                if (profileStatus == "Activated")
+                                if (Enum.TryParse(role, true, out SystemRole systemRole))
                                 {
-                                    HomescreenRouter(role,profileID);
-                                }else if (profileStatus == "Not Activated")
-                                {
-                                    SecurityScreenRouter(profileID,role);
+                                    if (profileStatus == "Activated")
+                                    {
+                                        HomescreenRouter(systemRole, profileID);
+                                    }
+                                    else if (profileStatus == "Not Activated")
+                                    {
+                                        SecurityScreenRouter(systemRole, profileID);
+                                    }
                                 }
                             }
                         }
@@ -207,26 +219,25 @@ namespace Dropify
             }
         }
 
-        private void SecurityScreenRouter(Guid profileID, string role)
+
+
+        private void SecurityScreenRouter(SystemRole role, Guid profileID)
         {
-            switch (role.ToLower())
+            switch (role)
             {
-                case "user":
+                case SystemRole.User:
                     SecurityUI securityUI = new SecurityUI(profileID, tbxEmail.Text, 1);
                     securityUI.Show();
                     this.Hide();
                     break;
 
-                case "manager":
+
+                case SystemRole.DeliveryPerson:
                     
                     break;
 
-                case "deliveryperson":
+                case SystemRole.Admin:
                     
-                    break;
-
-                case "admin":
-
                     break;
 
                 default:
@@ -236,26 +247,25 @@ namespace Dropify
             }
         }
 
-        private void HomescreenRouter(string role,Guid profileID)
+        private void HomescreenRouter(SystemRole role, Guid profileID)
         {
-            switch (role.ToLower())
+            switch (role)
             {
-                case "user":
+                case SystemRole.User:
                     UserUI userUI = new UserUI(profileID);
                     userUI.Show();
                     this.Hide();
                     break;
 
-                case "manager":
+
+                case SystemRole.DeliveryPerson:
 
                     break;
 
-                case "deliveryperson":
-
-                    break;
-
-                case "admin":
-
+                case SystemRole.Admin:
+                    AdminUI adminUI = new AdminUI(profileID);
+                    adminUI.Show();
+                    this.Hide();
                     break;
 
                 default:
@@ -265,5 +275,11 @@ namespace Dropify
             }
         }
 
+        private void btnForgotPass_Click(object sender, EventArgs e)
+        {
+            ForgotPasswordUI forgotPasswordUI = new ForgotPasswordUI();
+            forgotPasswordUI.Show();
+            this.Hide();
+        }
     }
 }
